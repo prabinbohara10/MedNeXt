@@ -142,10 +142,10 @@ def convert_to_nnUNet_MedNeXt_SSA_2023(source_file, destination_folder):
         copy_BraTS_segmentation_and_convert_labels_to_nnUNet_SSA_2023(in_file=seg_path, out_file=destination_seg)
 
 # for raw dataset transfer for mednext
-RAW_DATA_BASE = os.environ["nnUNet_raw_data"]
+RAW_DATA_BASE = os.environ["nnUNet_raw_data_base"]
 
 source_file = os.environ["ORIGINAL_TRAIN_DATA"] # Path to the source file
-destination_folder =os.path.join(RAW_DATA_BASE,"nnUNet_raw_data_base", "Task1137_BraTS2023_SSA") # Destination folder path  
+destination_folder =os.path.join(RAW_DATA_BASE,"nnUNet_raw_data", "Task1137_BraTS2023_SSA") # Destination folder path  
 convert_to_nnUNet_MedNeXt_SSA_2023(source_file, destination_folder)
 
 
